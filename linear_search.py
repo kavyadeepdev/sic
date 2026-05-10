@@ -1,4 +1,4 @@
-def sequential_search(search_element, elements):
+def sequential_search(search_element: float, elements: list[float]) -> int:
     for i in range(len(elements)):
         if elements[i] == search_element:
             return i
@@ -6,7 +6,7 @@ def sequential_search(search_element, elements):
 
 
 input_size = int(input("Enter size of the list: "))
-elements = []
+elements: list[float] = []
 
 print(f"Enter the {input_size} elements of the list")
 for i in range(input_size):

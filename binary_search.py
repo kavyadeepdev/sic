@@ -1,4 +1,4 @@
-def binary_search(search_element, elements):
+def binary_search(search_element: float, elements: list[float]) -> int:
     low = 0
     high = len(elements) - 1
     while low <= high:

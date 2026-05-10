@@ -1,4 +1,4 @@
-def insertion_sort(numbers):
+def insertion_sort(numbers: list[float]) -> list[float]:
     for i in range(len(numbers)):
         element = numbers[i]
         j = i - 1

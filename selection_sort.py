@@ -1,4 +1,4 @@
-def selection_sort(numbers):
+def selection_sort(numbers: list[float]) -> list[float]:
     for i in range(len(numbers)):
         smallest_index = i
         for j in range(i + 1, len(numbers)):

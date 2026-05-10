@@ -1,7 +1,7 @@
 import sys
 from insertion_sort import insertion_sort
 
-input_numbers = []
+input_numbers: list[float] = []
 
 for i in range(1, len(sys.argv)):
     input_numbers.append(float(sys.argv[i]))

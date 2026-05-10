@@ -13,7 +13,7 @@ from binary_search import binary_search
 # print("Elements given by user are:\n", elements)
 
 # Input from args
-input_numbers = []
+input_numbers: list[float] = []
 
 for i in range(1, len(sys.argv)):
     input_numbers.append(float(sys.argv[i]))

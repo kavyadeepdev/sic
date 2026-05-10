@@ -1,7 +1,7 @@
 from selection_sort import selection_sort
 import sys
 
-input_elements = []
+input_elements: list[float] = []
 for i in range(1, len(sys.argv)):
     input_elements.append(float(sys.argv[i]))
 

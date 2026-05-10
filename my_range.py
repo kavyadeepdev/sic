@@ -1,4 +1,4 @@
-def my_range(*args):
+def my_range(*args: int):
     # print(type(args))
     if len(args) == 1:
         i = 0

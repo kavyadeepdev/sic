@@ -1,4 +1,4 @@
-def partition(numbers):
+def partition(numbers: list[float]) -> list[float]:
     pivot = numbers[-1]
     j = 0
     for i in range(len(numbers)):

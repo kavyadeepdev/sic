@@ -1,6 +1,9 @@
-from bst import bst, insert, delete, update, inorder, preorder, postorder 
-def get_menu(choice: int):
-    menu = {
+from node import Node
+from bst import BST, insert, delete, update, inorder, preorder, postorder 
+from collections.abc import Callable
+
+def get_menu(choice: int) -> Callable[..., Node | None]:
+    menu: dict[int, Callable[..., Node | None]] = {
         1: insert,
         2: delete,
         3: update,
@@ -13,6 +16,8 @@ def get_menu(choice: int):
 
 def end():
     print("Closing menu")
+
+bst = BST()
 
 def run_menu():
     while True:
@@ -30,7 +35,7 @@ def run_menu():
             input_value = int(input("Enter value: "))
             get_menu(input_choice)(bst, input_value)
         if input_choice in [4, 5, 6]:
-            get_menu(input_choice)(bst.head)
+            get_menu(input_choice)(bst.root)
         if input_choice == 7:
             get_menu(input_choice)()
             break

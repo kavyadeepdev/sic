@@ -1,16 +1,16 @@
 from node import Node
 class BST:
     def __init__(self):
-        self.head: Node | None = None
+        self.root: Node | None = None
 
 def insert(bst: BST, value: int) -> Node:
     new_node = Node(value)
-    if bst.head is None:
-        bst.head = new_node
+    if bst.root is None:
+        bst.root = new_node
     else:
-        current = bst.head
+        current = bst.root
         prev: Node | None = None
-        while current != None:
+        while current is not None:
             prev = current
             if value < current.value:
                 current = current.left
@@ -48,8 +48,3 @@ def postorder(current: Node | None):
     inorder(current.left)
     inorder(current.right)
     print(current.value)
-
-bst = BST()
-
-
-
